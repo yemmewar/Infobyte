@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&family=Lato:wght@300&family=Nunito:wght@300;400;600&display=swap');
 
-* {
+:root{
+    --yellow:#f9ca24;
+}
 
-    font-family: 'Baloo Bhai 2', cursive;
-    font-family: 'Lato', sans-serif;
+*{
     font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
@@ -25,9 +26,19 @@ html {
     overflow-x: hidden;
 }
 
-html::webkit-scrollbar-thumb {
-    background: var(--yellow);
+html::-webkit-scrollbar{
+   width:1.4rem;
 
+}
+
+html::-webkit-scrollbar-track{
+    background: #222;
+    
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--yellow);
+    
 }
 
 body {
@@ -38,17 +49,17 @@ body {
 
 header {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    height: 100%;
-    width: 35rem;
+    top:0;
+    left:0;
+    z-index:1000;
+    height:100%;
+    width:35rem;
     background: #1a1a1a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    text-align: center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-flow:column;
+    text-align:center;
 }
 
 header .user img {
@@ -75,7 +86,7 @@ header .user .post{
 }
 
 header .navbar {
-    width: 100%;
+    width:100%;
 }
 
 header .navbar ul {
@@ -84,7 +95,7 @@ header .navbar ul {
 
 }
 
-header .navbar ul li a {
+header .navbar ul li a{
     display: block;
     padding: 1rem;
     margin: 1.5rem 0;
@@ -95,10 +106,10 @@ header .navbar ul li a {
 }
 
 header .navbar ul li a:hover {
-    background: var(--yellow);
+    background:var(--yellow);
 }
 
-#menu {
+#menu{
     position: fixed;
     top: 2rem;
     right: 2rem;
@@ -129,7 +140,7 @@ header .navbar ul li a:hover {
     font-size: 5rem;
     color: #fff;
 
-}
+} 
 
 
 
@@ -138,21 +149,7 @@ header .navbar ul li a:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* media queries */
 @media (max-width:1200px) {
     html {
         font-size: 55%;
@@ -160,8 +157,8 @@ header .navbar ul li a:hover {
 
 }
 
-@media (max-width:991px) {
-    header {
+@media (max-width:991px){
+    header{
         left: -120%;
     }
 
@@ -175,9 +172,11 @@ header .navbar ul li a:hover {
     }
 
 
-}
+} 
 
-/* @media (max-width:768px){
+
+
+@media(max-width:768px){
     html{
        font-size: 50%;
     }
@@ -193,4 +192,4 @@ header .navbar ul li a:hover {
     
     
 
-} */
+}
